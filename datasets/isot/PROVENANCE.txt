@@ -1,0 +1,9 @@
+Dataset: ISOT Fake and Real News Dataset
+Original project/repository: https://github.com/KaiDMML/FakeNewsNet (ISOT dataset is distributed separately; verify the specific download source and its terms before redistribution.)
+Files supplied by user: Fake.csv and True.csv
+Raw rows in supplied files: Fake.csv 23,481; True.csv 21,417; total 44,898.
+Loader label convention: Fake.csv -> 1 (FAKE); True.csv -> 0 (REAL).
+After normalized title/body deduplication in this project: 39,100 rows; 17,905 fake; 21,195 real.
+Columns in source files: title, text, subject, date.
+Limitations: Text-news dataset. It does not provide image tampering ground-truth labels or complete social propagation graphs. Do not use it as image or graph supervised ground truth.
+Redistribution: The user supplied these CSV files. Review the dataset's original license/terms before public redistribution.

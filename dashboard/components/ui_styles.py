@@ -294,23 +294,51 @@ def apply_custom_glassmorphism():
             background-color: var(--surface) !important;
             color: var(--text-primary) !important;
         }
+        /* Primary Button (Forest Green Box & Crisp White Text) */
         .stButton > button[kind="primary"],
-        .stButton > button[kind="primary"] * {
-            background-color: var(--accent-forest) !important;
+        .stButton > button[kind="primary"] *,
+        .stButton > button[data-testid="baseButton-primary"],
+        .stButton > button[data-testid="baseButton-primary"] *,
+        button[kind="primary"],
+        button[kind="primary"] *,
+        button[data-testid="baseButton-primary"],
+        button[data-testid="baseButton-primary"] *,
+        button[data-testid="baseButton-primary"] p,
+        button[kind="primary"] p {
+            background-color: #34483C !important;
             border: 1px solid #233128 !important;
             color: #FFFFFF !important;
+            -webkit-text-fill-color: #FFFFFF !important;
         }
+
+        /* Primary Button Disabled State */
         .stButton > button[kind="primary"]:disabled,
-        .stButton > button[kind="primary"]:disabled * {
+        .stButton > button[kind="primary"]:disabled *,
+        .stButton > button[data-testid="baseButton-primary"]:disabled,
+        .stButton > button[data-testid="baseButton-primary"]:disabled *,
+        button[kind="primary"]:disabled,
+        button[kind="primary"]:disabled *,
+        button[data-testid="baseButton-primary"]:disabled,
+        button[data-testid="baseButton-primary"]:disabled *,
+        button[data-testid="baseButton-primary"]:disabled p,
+        button[kind="primary"]:disabled p {
             background-color: #34483C !important;
+            border: 1px solid #233128 !important;
             color: #FFFFFF !important;
+            -webkit-text-fill-color: #FFFFFF !important;
             opacity: 0.85 !important;
+            cursor: not-allowed !important;
         }
-        .stButton > button[kind="primary"]:hover,
-        .stButton > button[kind="primary"]:hover * {
-            background-color: var(--text-primary) !important;
-            border-color: #000000 !important;
+
+        /* Primary Button Hover State */
+        .stButton > button[kind="primary"]:hover:not(:disabled),
+        .stButton > button[kind="primary"]:hover:not(:disabled) *,
+        .stButton > button[data-testid="baseButton-primary"]:hover:not(:disabled),
+        .stButton > button[data-testid="baseButton-primary"]:hover:not(:disabled) * {
+            background-color: #252724 !important;
+            border-color: #121312 !important;
             color: #FFFFFF !important;
+            -webkit-text-fill-color: #FFFFFF !important;
         }
 
         /* Input Controls & Selectboxes */
